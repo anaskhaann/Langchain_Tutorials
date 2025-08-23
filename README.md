@@ -9,3 +9,10 @@ I am using UV for package management you can use pip also.
 - run `uv init` or create venv manually
 - `uv sync` to install required packages
 - verify langchain by printing `print(langchain.__version__)`
+- create `.env` and put all your API keys to it and add that to `.gitignore`
+- You can also use `pip` and traditional method to create a virtual environment by running `python -m venv .venv`
+- then Activate the environment by ` .venv\Scripts\Activate` for windows
+
+---
+
+Made with ❤️ by Mohd Anas Khan
