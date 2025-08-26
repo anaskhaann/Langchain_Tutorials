@@ -1,8 +1,5 @@
-from typing import Literal, Optional
-
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
-from pydantic import BaseModel, Field
 
 load_dotenv()
 
@@ -25,32 +22,44 @@ Review by Salmon Bhoi
 # model create
 model = ChatGroq(model="openai/gpt-oss-20b")
 
-
-# schema: how to structure the output
-class Review(BaseModel):
-    # set field for providing description
-    key_theme: list[str] = Field(
-        description="Write down all the key themes discussed in the review in a list"
-    )
-    summary: str = Field(description="A brief summary of the review")
-    sentiment: Literal["pos", "neg"] = Field(
-        description="Return sentiment of the review either negative, positive or neutral"
-    )
-
-    # the below are optional thus import optional
-    pros: Optional[list[str]] = Field(
-        default=None, description="Write all pros inside a list"
-    )
-    cons: Optional[list[str]] = Field(
-        default=None, description="Write all cons inside a list"
-    )
-    name: Optional[str] = Field(
-        default=None, description="Write the name of the reviewer"
-    )
+# Json Schema
+json_schema = {
+    "title": "Review",
+    "type": "object",
+    "properties": {
+        "key_themes": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Write down all the key themes discussed in the review in a list",
+        },
+        "summary": {"type": "string", "description": "A brief summary of the review"},
+        "sentiment": {
+            "type": "string",
+            # enum is used instead of Literal
+            "enum": ["pos", "neg"],
+            "description": "Return sentiment of the review either negative, positive or neutral",
+        },
+        "pros": {
+            "type": ["array", "null"],
+            "items": {"type": "string"},
+            "description": "Write down all the pros inside a list",
+        },
+        "cons": {
+            "type": ["array", "null"],
+            "items": {"type": "string"},
+            "description": "Write down all the cons inside a list",
+        },
+        "name": {
+            "type": ["string", "null"],
+            "description": "Write the name of the reviewer",
+        },
+    },
+    "required": ["key_themes", "summary", "sentiment"],
+}
 
 
 # tell the model to refer the above structure
-structure_model = model.with_structured_output(Review)
+structure_model = model.with_structured_output(json_schema)
 
 # invoke structured model
 response = structure_model.invoke(big_review)
@@ -58,10 +67,13 @@ response = structure_model.invoke(big_review)
 print(response)
 
 print("========================================================")
-print(response.name)  # because it is a pydantic object
+print(response["name"])  # because it is a pydantic object
 
 print("========================================================")
-print(response.summary)
+print(response["summary"])
 
 print("========================================================")
-print(response.sentiment)
+print(response["sentiment"])
+
+print("========================================================")
+print(response["key_themes"])
