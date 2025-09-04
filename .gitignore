@@ -11,3 +11,6 @@ wheels/
 
 # API keys
 .env
+
+# random files which dont need to push
+document_loaders/docs/sample.pdf
