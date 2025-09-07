@@ -108,6 +108,37 @@ I am using UV for package management you can use pip also.
   - Vector Store in Langchain
   - ChromaDb Example
 
+- [x] Retrievers
+
+  - What are Retrievers
+  - How they are different from Vector Store similarity search
+  - Different Types of Retrievers
+  - Data Source based retrievers
+  - Searching mechanism based retrievers
+  - Wikipedia Retriever
+  - Vector Store Retriever
+  - Maximum Marginal Relevance Retriever
+  - Multi Query Retriever
+  - Contextual Compression Retriever
+  - Other Retrivers
+
+- [x] Retrieval Augmented Generation(RAG)
+  - Why we need Rag
+  - Where LLM fails
+  - How fine tuning can solve those problems where llm fails
+  - Types of Fine Tuning which can be done
+  - Supervised Training (Fine Tuning)
+  - Issues with fine tuning
+  - In Context Learning
+  - How it can be done and become important part for RAG
+  - what is RAG
+  - Steps involved in Rag(Indexing, Retrievel, Augmentation, Generation)
+  - Indexing
+  - Retreivel
+  - Augmentation
+  - Generation
+  - Small Project
+  
 - [ ] Memory
 - [ ] Indexes
 - [ ] Agents
