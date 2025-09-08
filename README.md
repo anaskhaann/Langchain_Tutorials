@@ -15,7 +15,7 @@ I am using UV for package management you can use pip also.
 
 ---
 
-## Outline
+## Topics
 
 - [x] Models
   - Language Models | Embedding Models
@@ -123,6 +123,7 @@ I am using UV for package management you can use pip also.
   - Other Retrivers
 
 - [x] Retrieval Augmented Generation(RAG)
+
   - Why we need Rag
   - Where LLM fails
   - How fine tuning can solve those problems where llm fails
@@ -138,11 +139,24 @@ I am using UV for package management you can use pip also.
   - Augmentation
   - Generation
   - Small Project
-  
+
+- [x] Tools
+
+  - What are tools
+  - How they are helpfull
+  - Types of Tools(Builtin, Custom)
+  - How Tools are related to Agents
+  - How to use builtin tools
+  - How to create custom Tools
+  - using @tool decorator
+  - using StructureTool
+  - using BaseTool
+  - Toolkit
+
 - [ ] Memory
 - [ ] Indexes
 - [ ] Agents
 
 ---
 
-Made with ❤️ by Mohd Anas
+Made with ❤️ by **Mohd Anas**
