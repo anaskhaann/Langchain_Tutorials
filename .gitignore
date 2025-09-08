@@ -12,5 +12,9 @@ wheels/
 # API keys
 .env
 
-# random files which dont need to push
-document_loaders/docs/sample.pdf
+# files which dont need to push
+*sample.pdf
+*.sqlite
+*.sqlite3
+*.bin
+*.db

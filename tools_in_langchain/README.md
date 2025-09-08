@@ -91,4 +91,24 @@ A **Toolkit** is a pre-packaged collection of related tools designed to give an 
 
 ---
 
+## Tool Binding
+
+**Tool Binding** is the process of registering a Python function (or external resource) as a tool that an LLM can access.
+
+## Tool Calling
+
+**Tool Calling** happens when the LLM decides to use a bound tool instead of responding directly.
+Instead of plain text, the model outputs a structured request specifying:
+
+- The tool name
+
+- The arguments
+
+## Tool Execution
+
+**Tool Execution** is when the requested tool is actually run with the provided arguments.
+The system parses the arguments, calls the function, and returns the result back to the LLM.
+
+---
+
 Made with ❤️ by **Mohd Anas**

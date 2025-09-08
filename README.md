@@ -152,6 +152,9 @@ I am using UV for package management you can use pip also.
   - using StructureTool
   - using BaseTool
   - Toolkit
+  - Tool Binding
+  - Tool Calling
+  - Tool Execution
 
 - [ ] Memory
 - [ ] Indexes
