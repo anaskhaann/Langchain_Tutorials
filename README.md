@@ -156,9 +156,18 @@ I am using UV for package management you can use pip also.
   - Tool Calling
   - Tool Execution
 
-- [ ] Memory
-- [ ] Indexes
-- [ ] Agents
+- [x] Agents
+  - What are Agents
+  - Characteristics of Agent
+  - Detail about `agent` and `agent Executor`
+  - How Agent is Created
+  - Working of Agent
+  - How Agent Executor is Creator
+  - Working of Agent Executor
+  - What is ReAct Agent
+  - Working of ReAct Agent
+  - When to use ReAct Agent
+  - Architecture of ReAct Agent
 
 ---
 
