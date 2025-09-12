@@ -18,3 +18,7 @@ wheels/
 *.sqlite3
 *.bin
 *.db
+*.png
+*.jpeg
+*.jpg
+*.webp
